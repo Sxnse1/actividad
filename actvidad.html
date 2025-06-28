@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Conceptual: Pensamiento Convergente, Divergente y Herramientas Creativas</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5; /* Un gris claro para el fondo */
+            color: #333;
+            line-height: 1.6;
+        }
+        .concept-node {
+            border-radius: 1.5rem; /* Bordes más redondeados */
+            padding: 1.5rem;
+            margin: 1rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+        .concept-node:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        .main-concept {
+            background: linear-gradient(135deg, #6a82fb, #fc5c7d); /* Degradado vibrante */
+            color: white;
+            font-size: 2.25rem; /* Texto más grande */
+            font-weight: 700;
+            padding: 2.5rem 3rem;
+            border-radius: 9999px; /* Forma circular */
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 200px;
+            min-height: 200px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+        }
+        .branch-concept {
+            background-color: #ffffff; /* Fondo blanco para las ramas */
+            border: 2px solid #a7a7a7; /* Borde gris oscuro */
+            min-height: 150px; /* Altura mínima para mejor visualización */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .sub-concept {
+            background-color: #f8f9fa; /* Fondo ligeramente gris para sub-conceptos */
+            border: 1px solid #dee2e6;
+            padding: 1rem;
+            margin-top: 0.75rem;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            border-radius: 0.75rem;
+        }
+        .relation-section {
+            background-color: #e9ecef; /* Un gris un poco más oscuro */
+            border-radius: 1.5rem;
+            padding: 2rem;
+            margin-top: 2rem;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
+        }
+        h1, h2, h3, h4 {
+            color: #212529; /* Color de texto oscuro para títulos */
+            font-weight: 600;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+        }
+        ol {
+            list-style-type: decimal;
+            padding-left: 1.5rem;
+        }
+        b {
+            color: #495057;
+        }
+        /* Flechas decorativas - Simplificado para HTML puro */
+        .arrow {
+            position: absolute;
+            background-color: #6a82fb;
+            height: 3px;
+            width: 50px; /* Ajustar según necesidad */
+            transform-origin: 0% 50%;
+            z-index: 5;
+        }
+        .arrow::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 10px solid #6a82fb;
+            border-top: 6px solid transparent;
+            border-bottom: 6px solid transparent;
+            right: -10px;
+            top: -4.5px;
+        }
+
+        /* Responsive adjustments */
+        @media (min-width: 768px) {
+            .grid-cols-1-md-3 {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
+</head>
+<body class="p-8">
+    <div class="max-w-7xl mx-auto py-8">
+        <h1 class="text-4xl font-extrabold text-center mb-12 text-gray-800">Mapa Conceptual: Pensamiento Convergente, Divergente y Herramientas Creativas</h1>
+
+        <!-- Contenedor principal del mapa conceptual -->
+        <div class="relative flex flex-col items-center justify-center min-h-[600px] md:min-h-[800px] lg:min-h-[900px]">
+
+            <!-- Nodo Central: Pensamiento Creativo -->
+            <div class="main-concept z-20">
+                Pensamiento Creativo
+            </div>
+
+            <!-- Ramas principales -->
+            <div class="relative w-full mt-16 md:mt-24 lg:mt-32 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 lg:gap-16 px-4">
+
+                <!-- Flechas (simbólicas, no dinámicas SVG aquí) -->
+                <!-- Se podrían agregar flechas con CSS si fuera un diseño más fijo, pero para flexibilidad, se omiten las líneas complejas de conexión. El diseño grid implicará la relación visual. -->
+
+                <!-- Rama 1: Pensamiento Divergente -->
+                <div class="concept-node branch-concept">
+                    <h2 class="text-2xl font-bold text-pink-600 mb-4">Pensamiento Divergente</h2>
+                    <div class="sub-concept w-full">
+                        <h3 class="text-xl font-semibold mb-2">Definición:</h3>
+                        <p>Proceso mental que busca generar múltiples soluciones, ideas o posibilidades a partir de un único punto de partida. Se caracteriza por la amplitud, la fluidez y la originalidad. Es fundamental en las primeras etapas de un proceso creativo, donde se explora y se abren opciones.</p>
+                    </div>
+                    <div class="sub-concept w-full mt-4">
+                        <h3 class="text-xl font-semibold mb-2">Características:</h3>
+                        <ul class="list-disc pl-5">
+                            <li><b>Fluidez:</b> Capacidad de producir una gran cantidad de ideas.</li>
+                            <li><b>Flexibilidad:</b> Habilidad para generar ideas de diferentes categorías o perspectivas.</li>
+                            <li><b>Originalidad:</b> Creación de ideas únicas, poco comunes o novedosas.</li>
+                            <li><b>Elaboración:</b> Desarrollo y mejora de las ideas iniciales.</li>
+                            <li><b>No lineal:</b> Explora caminos menos evidentes, permitiendo saltos.</li>
+                            <li><b>Acepta información incompleta o contradictoria.</b></li>
+                            <li><b>Difiere el juicio:</b> Se pospone la evaluación.</li>
+                        </ul>
+                    </div>
+                    <div class="sub-concept w-full mt-4">
+                        <h3 class="text-xl font-semibold mb-2">Ejemplos:</h3>
+                        <ul class="list-disc pl-5">
+                            <li>Improvisar una receta de cocina.</li>
+                            <li>Generar múltiples usos para un objeto cotidiano.</li>
+                            <li>Brainstorming para ideas de campaña publicitaria.</li>
+                            <li>Resolver acertijos con juegos de palabras.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Rama 2: Pensamiento Convergente -->
+                <div class="concept-node branch-concept">
+                    <h2 class="text-2xl font-bold text-blue-600 mb-4">Pensamiento Convergente</h2>
+                    <div class="sub-concept w-full">
+                        <h3 class="text-xl font-semibold mb-2">Definición:</h3>
+                        <p>Proceso mental que se enfoca en encontrar la única o la mejor solución a un problema o pregunta, utilizando la lógica, el razonamiento y la información existente. Es crítico y selectivo, buscando la precisión y la eficacia. Es crucial en las etapas finales del proceso creativo.</p>
+                    </div>
+                    <div class="sub-concept w-full mt-4">
+                        <h3 class="text-xl font-semibold mb-2">Características:</h3>
+                        <ul class="list-disc pl-5">
+                            <li><b>Lógico y deductivo:</b> Se basa en información previa y reglas.</li>
+                            <li><b>Selectivo:</b> Evalúa y selecciona la respuesta más adecuada.</li>
+                            <li><b>Lineal y estructurado:</b> Sigue pasos secuenciales.</li>
+                            <li><b>Busca una única respuesta correcta o la más óptima.</b></li>
+                            <li><b>Crítico y analítico:</b> Se enfoca en la validez y viabilidad.</li>
+                        </ul>
+                    </div>
+                    <div class="sub-concept w-full mt-4">
+                        <h3 class="text-xl font-semibold mb-2">Ejemplos:</h3>
+                        <ul class="list-disc pl-5">
+                            <li>Resolver un problema matemático.</li>
+                            <li>Establecer un presupuesto.</li>
+                            <li>Diagnosticar una enfermedad.</li>
+                            <li>Encontrar un culpable usando deducción lógica.</li>
+                            <li>Tomar decisiones basadas en análisis de datos.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Rama 3: Herramientas del Pensamiento Creativo -->
+                <div class="concept-node branch-concept">
+                    <h2 class="text-2xl font-bold text-green-600 mb-4">Herramientas del Pensamiento Creativo</h2>
+                    <div class="sub-concept w-full">
+                        <h3 class="text-xl font-semibold mb-2">Definición:</h3>
+                        <p>Técnicas y metodologías diseñadas para estimular, organizar y potenciar tanto el pensamiento divergente como el convergente, facilitando la generación y selección de ideas innovadoras.</p>
+                    </div>
+                    <div class="sub-concept w-full mt-4">
+                        <h3 class="text-xl font-semibold mb-2">Categorías / Ejemplos:</h3>
+                        <h4 class="font-semibold mt-2">Para estimular el Pensamiento Divergente:</h4>
+                        <ul class="list-disc pl-5">
+                            <li><b>Brainstorming (Lluvia de Ideas)</b></li>
+                            <li><b>SCAMPER</b></li>
+                            <li><b>Mapas Mentales (Visual Thinking)</b></li>
+                            <li><b>Relaciones Forzadas</b></li>
+                            <li><b>Pensamiento Lateral (De Bono)</b></li>
+                        </ul>
+                        <h4 class="font-semibold mt-2">Para facilitar la Convergencia y Evaluación:</h4>
+                        <ul class="list-disc pl-5">
+                            <li><b>Los Seis Sombreros para Pensar (De Bono)</b></li>
+                            <li><b>Análisis Morfológico</b></li>
+                            <li><b>PNI (Positivo, Negativo, Interesante)</b></li>
+                            <li><b>DO IT</b></li>
+                            <li><b>Filtros de viabilidad</b></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección de Relación Estrecha entre los Conceptos -->
+            <div class="relation-section w-full max-w-4xl mx-auto mt-16 md:mt-24 lg:mt-32">
+                <h2 class="text-3xl font-bold text-center mb-6 text-gray-700">Relación Estrecha entre los Conceptos</h2>
+                <ul class="list-disc pl-6 text-lg">
+                    <li class="mb-3"><b>Ciclo Creativo:</b> El pensamiento creativo sigue un ciclo donde el <b>pensamiento divergente</b> es crucial en la fase de <b>generación de ideas</b> (apertura, exploración), y el <b>pensamiento convergente</b> es esencial en la fase de <b>selección y desarrollo</b> (cierre, concreción). Son complementarios y necesarios.</li>
+                    <li class="mb-3"><b>Las Herramientas como Puente:</b> Las herramientas actúan como facilitadores, ayudando a transitar entre la divergencia y la convergencia.</li>
+                    <li class="mb-3"><b>Resolución de Problemas:</b> Se necesita divergencia para explorar y generar soluciones innovadoras, y luego convergencia para evaluar y elegir la más efectiva.</li>
+                    <li><b>Innovación:</b> Surge de la capacidad de alternar eficazmente entre la expansión de ideas (divergencia) y la focalización para refinar y ejecutar (convergencia), guiado por las herramientas adecuadas.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
